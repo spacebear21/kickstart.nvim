@@ -3,8 +3,6 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  -- replace surrounding pairs
-  'tpope/vim-surround',
   -- highlight other uses of the word under the cursor
   'RRethy/vim-illuminate',
   {
