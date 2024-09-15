@@ -34,6 +34,7 @@ return {
     end,
   },
   {
+    -- Lazygit in nvim
     'kdheepak/lazygit.nvim',
     cmd = {
       'LazyGit',
@@ -49,9 +50,17 @@ return {
     -- setting the keybinding for LazyGit with 'keys' is recommended in
     -- order to load the plugin when the command is run for the first time
     keys = {
-      { '<leader>go', '<cmd>LazyGit<cr>', desc = '[O]pen lazygit' },
+      { '<leader>gl', '<cmd>LazyGit<cr>', desc = 'Open [L]azygit' },
       { '<leader>gc', '<cmd>LazyGitFilter<cr>', desc = 'Open project [C]ommits' },
       { '<leader>gf', '<cmd>LazyGitFilterCurrentFile<cr>', desc = 'Open [F]ile commits' },
+    },
+  },
+  {
+    -- Quickkly open file in GitHub
+    'almo7aya/openingh.nvim',
+    keys = {
+      { '<leader>gb', mode = 'n', '<cmd>OpenInGHFile<cr>', desc = 'Open current file in [B]rowser' },
+      { '<leader>gb', mode = 'v', '<cmd>OpenInGHFileLines<cr>', desc = 'Open current selection in [B]rowser' },
     },
   },
 }
