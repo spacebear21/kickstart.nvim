@@ -25,6 +25,10 @@ return {
     init = function()
       vim.cmd.colorscheme 'catppuccin'
     end,
+    keys = {
+      { '<leader>td', '<cmd>colorscheme catppuccin-mocha<cr>', desc = '[T]oggle [D]ark mode' },
+      { '<leader>tl', '<cmd>colorscheme catppuccin-latte<cr>', desc = '[T]oggle [L]ight mode' },
+    },
   },
   {
     -- <Esc> mappings
