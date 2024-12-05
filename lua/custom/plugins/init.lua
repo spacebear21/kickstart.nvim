@@ -67,4 +67,14 @@ return {
       { '<leader>gb', mode = 'v', '<cmd>OpenInGHFileLines<cr>', desc = 'Open current selection in [B]rowser' },
     },
   },
+  {
+    -- Flutter LSP
+    'nvim-flutter/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim', -- optional for vim.ui.select
+    },
+    config = true,
+  },
 }
