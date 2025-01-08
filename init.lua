@@ -619,7 +619,7 @@ require('lazy').setup({
         clangd = {},
         -- gopls = {},
         pyright = {},
-        rust_analyzer = { settings = { ['rust-analyzer'] = { cargo = { features = '[]' } } } },
+        rust_analyzer = { settings = { ['rust-analyzer'] = { cargo = { features = 'all' } } } },
         html = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
