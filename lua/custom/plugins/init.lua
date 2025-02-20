@@ -77,4 +77,38 @@ return {
     },
     config = true,
   },
+  {
+    -- Code Companion
+    'olimorris/codecompanion.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+    },
+    config = function()
+      require('codecompanion').setup {
+        strategies = {
+          chat = {
+            adapter = 'anthropic',
+          },
+          inline = {
+            adapter = 'anthropic',
+          },
+        },
+        adapters = {
+          anthropic = function()
+            return require('codecompanion.adapters').extend('anthropic', {
+              env = {
+                api_key = 'cmd:gpg --decrypt ~/.anthropic-api-key.gpg 2>/dev/null',
+              },
+            })
+          end,
+        },
+      }
+    end,
+    keys = {
+      { '<LocalLeader>cc', mode = 'n', '<cmd>CodeCompanionChat Toggle<cr>', desc = 'Open [C]ode [C]ompanion chat' },
+      { '<LocalLeader>cc', mode = 'v', '<cmd>CodeCompanionChat Add<cr>', desc = '[C]ode [C]ompanion' },
+      { '<C-a>', mode = { 'n', 'v' }, '<cmd>CodeCompanionActions<cr>', desc = 'Open Code Companion [A]ctions' },
+    },
+  },
 }
