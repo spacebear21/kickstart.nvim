@@ -98,7 +98,7 @@ return {
           anthropic = function()
             return require('codecompanion.adapters').extend('anthropic', {
               env = {
-                api_key = 'cmd:gpg --decrypt ~/.anthropic-api-key.gpg 2>/dev/null',
+                api_key = 'cmd:cat ~/.anthropic-api-key',
               },
             })
           end,
