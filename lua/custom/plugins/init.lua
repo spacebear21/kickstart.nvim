@@ -111,4 +111,10 @@ return {
       { '<C-a>', mode = { 'n', 'v' }, '<cmd>CodeCompanionActions<cr>', desc = 'Open Code Companion [A]ctions' },
     },
   },
+  {
+    -- Typescript LSP
+    'pmizio/typescript-tools.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+    opts = {},
+  },
 }
