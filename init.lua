@@ -672,7 +672,18 @@ require('lazy').setup({
         clangd = { filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'hpp' } },
         -- gopls = {},
         pyright = {},
-        rust_analyzer = { settings = { ['rust-analyzer'] = { cargo = { features = 'all' } } } },
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              cargo = {
+                features = 'all',
+              },
+            },
+            checkOnSave = {
+              command = 'clippy',
+            },
+          },
+        },
         html = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
