@@ -106,8 +106,6 @@ return {
       }
     end,
     keys = {
-      { '<LocalLeader>cc', mode = 'n', '<cmd>CodeCompanionChat Toggle<cr>', desc = 'Open [C]ode [C]ompanion chat' },
-      { '<LocalLeader>cc', mode = 'v', '<cmd>CodeCompanionChat Add<cr>', desc = '[C]ode [C]ompanion' },
       { '<C-a>', mode = { 'n', 'v' }, '<cmd>CodeCompanionActions<cr>', desc = 'Open Code Companion [A]ctions' },
     },
   },
